@@ -1,3 +1,4 @@
+/* ALL THE FONTS - the fonts were premium online, so downloaed and used them locally*/
 @font-face {
   font-family: mirador;
   src: url(fonts/MiradorBold.otf);
@@ -10,20 +11,20 @@
 }
 
 @font-face {
-  font-family: lexis-thin;
-  src: url(fonts/LexisThin.otf);
-}
-
-@font-face {
   font-family: freight-sans;
   src: url(fonts/FreightSansLight.otf);
 }
 
+/* VARIABLES */
 :root {
   --text-color-1: #1e1e1e;
-  --text-color-2: rgb(112, 112, 112);
+  --text-color-2: #777;
+  --font-heading: mirador;
+  --font-primary: lexis-medium;
+  --font-secondary: freight-sans;
 }
 
+/* CSS RESET */
 *,
 *::before,
 *::after {
@@ -55,21 +56,14 @@ html {
   scroll-behavior: smooth;
 }
 
+/*ALL THE STYLES*/
 main {
   max-width: 1440px;
   margin: 0 auto;
 }
 
-.padding-lg {
-  padding: 40px;
-}
-
 .padding-md {
   padding: 30px;
-}
-
-.padding-sm {
-  padding: 20px;
 }
 
 .text-padding {
@@ -89,7 +83,6 @@ main {
 
 .small-images {
   display: flex;
-  width: 100%;
 }
 
 .img-container {
@@ -110,18 +103,18 @@ main {
 
 .main-heading {
   font-size: 40px;
-  font-family: mirador;
+  font-family: var(--font-heading);
   color: var(--text-color-1);
 }
 
 .sub-heading {
-  font-family: lexis-medium;
+  font-family: var(--font-primary);
   color: var(--text-color-1);
   font-size: 18px;
 }
 
 .main-text {
-  font-family: lexis-medium;
+  font-family: var(--font-primary);
   line-height: 1.7;
   color: var(--text-color-2);
   font-weight: 300;
@@ -134,6 +127,7 @@ main {
 .review-text {
   color: var(--text-color-2);
   padding: 5px 0;
+  font-family: var(--font-primary);
 }
 
 .review-text span {
@@ -156,14 +150,14 @@ main {
 .price {
   padding: 25px 0;
   font-size: 35px;
-  font-family: lexis-medium;
+  font-family: var(--font-primary);
   color: var(--text-color-1);
 }
 
 .bottom-text {
   padding: 5px 0;
   color: var(--text-color-2);
-  font-family: lexis-medium;
+  font-family: var(--font-primary);
   font-size: 15px;
 }
 
@@ -174,7 +168,7 @@ main {
 }
 
 .btn-primary {
-  font-family: freight-sans;
+  font-family: var(--font-secondary);
   font-size: 20px;
   text-transform: uppercase;
   padding: 15px 40px;
@@ -193,7 +187,7 @@ main {
 }
 
 .btn-secondary {
-  font-family: freight-sans;
+  font-family: var(--font-secondary);
   font-size: 20px;
   text-transform: uppercase;
   padding: 15px 40px;
@@ -221,7 +215,7 @@ main {
 .service {
   flex-basis: 400px;
   display: flex;
-  font-family: lexis-medium;
+  font-family: var(--font-primary);
   padding-bottom: 30px;
 }
 
@@ -266,16 +260,8 @@ main {
 }
 
 @media (max-width: 992px) {
-  .padding-lg {
-    padding: 30px;
-  }
-
   .padding-md {
     padding: 20px;
-  }
-
-  .padding-sm {
-    padding: 10px;
   }
 
   .main-heading {
@@ -305,10 +291,6 @@ main {
 }
 
 @media (max-width: 768px) {
-  .padding-lg {
-    padding: 20px;
-  }
-
   .padding-md {
     padding: 15px;
   }
